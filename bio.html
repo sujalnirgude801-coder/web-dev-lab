@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujal Nirgude | Semantic Bio (P5)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <style>
+    .bio-container-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      text-align: center;
+    }
+    .avatar-initials {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto var(--space-md);
+      border-radius: var(--radius-round);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-xl);
+      font-weight: bold;
+      color: #0a0e17;
+    }
+    .facts-box {
+      background: var(--bg-dark);
+      padding: var(--space-md);
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-lg);
+      text-align: left;
+    }
+    .facts-box ul {
+      list-style-type: none;
+      margin-top: var(--space-xs);
+    }
+    .facts-box li {
+      padding: 3px 0;
+      font-size: var(--font-sm);
+      color: var(--text-muted);
+    }
+    .bio-header {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .bio-footer {
+      margin-top: var(--space-2xl);
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: var(--font-sm);
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .bio-container-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Semantic Header -->
+  <header class="bio-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" style="font-weight: bold;">← Back to Portfolio</a>
+      <span style="color: var(--primary); font-size: var(--font-sm);">Practical P5 Demo</span>
+    </div>
+  </header>
+
+  <!-- Semantic Main Landmark -->
+  <main class="container">
+    <div class="bio-container-grid">
+      
+      <!-- Article: Primary Narrative -->
+      <article>
+        <header>
+          <span style="color: var(--primary); text-transform: uppercase; font-size: var(--font-sm); font-weight: bold;">Student Bio</span>
+          <h1>Sujal Nirgude</h1>
+          <p style="font-size: var(--font-lg); margin-top: 4px;">1st Semester B.Tech CSE • Bosscoder School of Technology</p>
+        </header>
+
+        <section style="margin-top: var(--space-xl);">
+          <h2>About Me</h2>
+          <p style="margin-top: var(--space-xs);">
+            Hello, I am Sujal Nirgude! I am currently an undergraduate student in my 1st semester of Computer Science &amp; Engineering at Bosscoder School of Technology. I am learning the foundations of modern front-end web development, semantic HTML5, responsive CSS layout architecture, and Git version control.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            This page satisfies Practical P5 by demonstrating the proper use of semantic HTML5 landmark tags (header, main, article, section, figure, figcaption, aside, and footer) to create accessible and maintainable web pages.
+          </p>
+        </section>
+
+        <!-- Education -->
+        <section style="margin-top: var(--space-xl);">
+          <h2>Education</h2>
+          <div style="margin-top: var(--space-sm); border-left: 2px solid var(--primary); padding-left: var(--space-md);">
+            <h4>B.Tech in Computer Science &amp; Engineering</h4>
+            <p><strong>Bosscoder School of Technology</strong> • 2026 - Present</p>
+            <p>1st Semester foundations in computing, programming, and web systems.</p>
+          </div>
+        </section>
+
+        <!-- Learning Goals -->
+        <section style="margin-top: var(--space-xl);">
+          <h2>Learning Focus</h2>
+          <ul style="margin-top: var(--space-xs); padding-left: 20px; color: var(--text-muted);">
+            <li>CSS Grid and Flexbox responsive layout systems</li>
+            <li>Semantic markup for accessibility and web standards</li>
+            <li>Professional Git branch management and command-line workflows</li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Aside: Info Card -->
+      <aside>
+        <div class="profile-card">
+          <figure>
+            <div class="avatar-initials">SN</div>
+            <figcaption>
+              <strong>Sujal Nirgude</strong><br>
+              <span style="font-size: var(--font-sm); color: var(--text-muted);">Bosscoder School of Technology</span>
+            </figcaption>
+          </figure>
+
+          <div class="facts-box">
+            <h3 style="font-size: var(--font-base); color: var(--text-main);">Fast Facts</h3>
+            <ul>
+              <li><strong>Program:</strong> B.Tech CSE</li>
+              <li><strong>Semester:</strong> 1st Semester</li>
+              <li><strong>College:</strong> Bosscoder School of Tech</li>
+              <li><strong>Lab:</strong> Web Development Practicals</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="bio-footer">
+    <div class="container">
+      <p>&copy; 2026 Sujal Nirgude • Bosscoder School of Technology</p>
+    </div>
+  </footer>
+
+</body>
+</html>
