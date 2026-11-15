@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Student Chronicle | CSS Grid 3-Column (P11)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/grid.css">
+  <style>
+    .masthead-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      margin-bottom: var(--space-xs);
+    }
+    .date-meta-bar {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 2px solid var(--text-main);
+      padding: 6px 0;
+      font-size: var(--font-sm);
+      color: var(--text-muted);
+      margin-bottom: var(--space-md);
+      text-transform: uppercase;
+    }
+    .initial-dropcap::first-letter {
+      font-family: var(--font-serif);
+      float: left;
+      font-size: 3.2rem;
+      line-height: 0.8;
+      padding-right: 8px;
+      color: var(--primary);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-title">← Portfolio Home</a>
+      <span style="color: var(--primary); font-size: var(--font-sm);">Practical P11 Demo</span>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- 3-Column Newspaper CSS Grid -->
+    <div class="newspaper-grid-system">
+      
+      <!-- Masthead -->
+      <div class="banner-masthead">
+        <h1 class="masthead-title">The Bosscoder Student Gazette</h1>
+        <div class="date-meta-bar">
+          <span>Issue 1 • Semester 1</span>
+          <span>Web Development Lab Special</span>
+          <span>Bangalore, India</span>
+        </div>
+      </div>
+
+      <!-- Lead Column (2fr) -->
+      <section class="main-lead-story">
+        <article>
+          <span style="color: var(--primary); font-weight: 600; font-size: var(--font-sm); text-transform: uppercase;">Front Page Story</span>
+          <h2 style="margin: var(--space-xs) 0 var(--space-sm);">CSS Grid Modernizes Multi-Column Web Typography</h2>
+          <p class="initial-dropcap">
+            Computer science students at Bosscoder School of Technology are designing responsive, multi-axis user interfaces using CSS Grid. Unlike legacy float hacks, Grid enables simultaneous coordination across both rows and columns with minimal stylesheet rules.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            By declaring <code>grid-template-areas</code>, layout zones can be arranged visually directly within CSS. This practical demonstrates how naturally multi-column editorial pages adapt to any screen size.
+          </p>
+        </article>
+      </section>
+
+      <!-- Second Column (1.2fr) -->
+      <section class="secondary-story-col">
+        <article>
+          <h3>Flexbox Coordination</h3>
+          <p style="margin-top: var(--space-xs); font-size: var(--font-sm);">
+            While CSS Grid orchestrates the 3-column page structure, Flexbox is used within individual components for navigation menus, tag badges, and button groups.
+          </p>
+          <p style="margin-top: var(--space-sm); font-size: var(--font-sm);">
+            Employing Grid for macro layout and Flexbox for micro components represents current best practice in responsive design.
+          </p>
+        </article>
+      </section>
+
+      <!-- Third Column (1fr) -->
+      <aside class="tertiary-story-col">
+        <h3>Campus Highlights</h3>
+        <ul style="margin-top: var(--space-xs); padding-left: 16px; font-size: var(--font-sm); color: var(--text-muted);">
+          <li>B.Tech CSE Practical P11</li>
+          <li>3-column responsive layout</li>
+          <li>Semantic structure verified</li>
+        </ul>
+        <div style="margin-top: var(--space-md); padding-top: var(--space-sm); border-top: 1px dashed var(--border-color); font-size: var(--font-sm); font-style: italic;">
+          "Clean code and accessibility first."
+        </div>
+      </aside>
+
+      <!-- Grid Footer -->
+      <div class="editorial-footer-bar">
+        Practical P11: 3-Column Newspaper Layout built with CSS Grid areas and fractional units.
+      </div>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
